@@ -10,8 +10,10 @@ function displayExercise() {
 function exerciseSelector(list){
     var randomExcercise = Math.floor(Math.random() * list.length)
 
-    var selectedExercise = list[randomExcercise].NAME;
-    return selectedExercise;
+    var selectedExerciseName = list[randomExcercise].NAME;
+    var selectedExerciseMuscleGroup = list[randomExcercise].MUSCLE_GROUP;
+    checkMuscleGroups(selectedExerciseMuscleGroup);
+    return selectedExerciseName;
 }
 
 function repsGenerator(){
@@ -19,203 +21,210 @@ function repsGenerator(){
     return reps;
 }
 
+function checkMuscleGroups(selectedExerciseMuscleGroup){
+  if(selectedExerciseMuscleGroup === "Chest"){
+    console.log("chest");
+  }
+}
 
+
+//DATA
 var exerciseSet = [
         {
           "NAME": "Barbell Flat Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Dumbell Flat Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Barbell Incline Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Dumbell Incline Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Dumbell Fly",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Pushup",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Dumbell Close Grip Incline Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Svend Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Cable Crossovers",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Cable Fly",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Barbell Decline Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Dumbell Decline Bench Press",
-          "MUSCLE GROUP": "Chest"
+          "MUSCLE_GROUP": "Chest"
         },
         {
           "NAME": "Lat Puldown",
-          "MUSCLE GROUP": "Back"
+          "MUSCLE_GROUP": "Back"
         },
         {
           "NAME": "Seated Row",
-          "MUSCLE GROUP": "Back"
+          "MUSCLE_GROUP": "Back"
         },
         {
           "NAME": "Bent Over Row",
-          "MUSCLE GROUP": "Back"
+          "MUSCLE_GROUP": "Back"
         },
         {
           "NAME": "Wide Grip Pull Up",
-          "MUSCLE GROUP": "Back"
+          "MUSCLE_GROUP": "Back"
         },
         {
           "NAME": "Close Grip Pull Up",
-          "MUSCLE GROUP": "Back"
+          "MUSCLE_GROUP": "Back"
         },
         {
           "NAME": "Barbell Deadlift",
-          "MUSCLE GROUP": "Back"
+          "MUSCLE_GROUP": "Back"
         },
         {
           "NAME": "Barbell Shoulder Press",
-          "MUSCLE GROUP": "Shoulders"
+          "MUSCLE_GROUP": "Shoulders"
         },
         {
           "NAME": "Dumbell Shoulder Press",
-          "MUSCLE GROUP": "Shoulders"
+          "MUSCLE_GROUP": "Shoulders"
         },
         {
           "NAME": "Dumbell Side Raises",
-          "MUSCLE GROUP": "Shoulders"
+          "MUSCLE_GROUP": "Shoulders"
         },
         {
           "NAME": "Dumbell Front Raises",
-          "MUSCLE GROUP": "Shoulders"
+          "MUSCLE_GROUP": "Shoulders"
         },
         {
           "NAME": "Face Pull",
-          "MUSCLE GROUP": "Shoulders"
+          "MUSCLE_GROUP": "Shoulders"
         },
         {
           "NAME": "Barbell Squat",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Dumbell Squat",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Dumbell Lunges",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Seated Leg Press",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Calf Raises",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Hamstring Curls",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Straight Leg Deadlifts",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Quad Exstensions",
-          "MUSCLE GROUP": "Legs"
+          "MUSCLE_GROUP": "Legs"
         },
         {
           "NAME": "Plank",
-          "MUSCLE GROUP": "Abs"
+          "MUSCLE_GROUP": "Abs"
         },
         {
           "NAME": "Hanging Leg Raises",
-          "MUSCLE GROUP": "Abs"
+          "MUSCLE_GROUP": "Abs"
         },
         {
           "NAME": "Russian Twist",
-          "MUSCLE GROUP": "Abs"
+          "MUSCLE_GROUP": "Abs"
         },
         {
           "NAME": "Situps",
-          "MUSCLE GROUP": "Abs"
+          "MUSCLE_GROUP": "Abs"
         },
         {
           "NAME": "Ab Roller",
-          "MUSCLE GROUP": "Abs"
+          "MUSCLE_GROUP": "Abs"
         },
         {
           "NAME": "Dumbell Curl ",
-          "MUSCLE GROUP": "Biceps"
+          "MUSCLE_GROUP": "Biceps"
         },
         {
           "NAME": "Barbell Curl ",
-          "MUSCLE GROUP": "Biceps"
+          "MUSCLE_GROUP": "Biceps"
         },
         {
           "NAME": "Dumbell Hammer Curl",
-          "MUSCLE GROUP": "Biceps"
+          "MUSCLE_GROUP": "Biceps"
         },
         {
           "NAME": "Cable Curls",
-          "MUSCLE GROUP": "Biceps"
+          "MUSCLE_GROUP": "Biceps"
         },
         {
           "NAME": "Preacher Curls",
-          "MUSCLE GROUP": "Biceps"
+          "MUSCLE_GROUP": "Biceps"
         },
         {
           "NAME": "Cable Pull Downs",
-          "MUSCLE GROUP": "Triceps"
+          "MUSCLE_GROUP": "Triceps"
         },
         {
           "NAME": "Close Grip Barbell Bench",
-          "MUSCLE GROUP": "Triceps"
+          "MUSCLE_GROUP": "Triceps"
         },
         {
           "NAME": "Skull Crushers",
-          "MUSCLE GROUP": "Triceps"
+          "MUSCLE_GROUP": "Triceps"
         },
         {
           "NAME": "Dips",
-          "MUSCLE GROUP": "Triceps"
+          "MUSCLE_GROUP": "Triceps"
         },
         {
           "NAME": "Overhead Triceps Press",
-          "MUSCLE GROUP": "Triceps"
+          "MUSCLE_GROUP": "Triceps"
         },
         {
           "NAME": "Shrugs",
-          "MUSCLE GROUP": "Traps"
+          "MUSCLE_GROUP": "Traps"
         },
         {
           "NAME": "Barbell Upright Row",
-          "MUSCLE GROUP": "Traps"
+          "MUSCLE_GROUP": "Traps"
         },
         {
           "NAME": "Farmers Walks",
-          "MUSCLE GROUP": "Traps"
+          "MUSCLE_GROUP": "Traps"
         }
        
 ]
