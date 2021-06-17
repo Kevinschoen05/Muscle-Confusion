@@ -15,7 +15,7 @@ function exerciseSelector(list){
 }
 
 function repsGenerator(){
-    var reps = Math.floor(Math.random() * 26)
+    var reps = (Math.floor(Math.random() * 20)) + 5
     return reps;
 }
 
