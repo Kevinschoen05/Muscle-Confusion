@@ -1,11 +1,14 @@
-function displayExercise(filter) {  
-    var selectedMuscleGroup = muscleGroupSelector(exerciseSet, filter)
+function displayExercise() {  
+  filterList = generateFilterList();
+
+    var selectedMuscleGroup = muscleGroupSelector(exerciseSet, filterList)
     var output = exerciseSelector(selectedMuscleGroup);
     document.getElementById("exerciseOutput").innerText = output;
     
+    if(filterList.length > 0){
     var reps = repsGenerator(); 
     document.getElementById("reps").innerText = reps;
-
+    }
 };
 
 function exerciseSelector(list){
@@ -24,56 +27,52 @@ function muscleGroupSelector(list, muscleGroup) {
   selectedMuscleGroup = []; 
 
   for(var i = 0; i < list.length; i++){
-    if(list[i].MUSCLE_GROUP === muscleGroup){
-      selectedMuscleGroup.push(list[i].NAME);
+    for(var k = 0; k < muscleGroup.length; k++){
+      if(list[i].MUSCLE_GROUP === muscleGroup[k]){
+        selectedMuscleGroup.push(list[i].NAME);
+      }
     }
+
   }
+  
   return selectedMuscleGroup;
 }
 
-//event listeners for filtering
-const chestFilter = document.querySelector("#chestButton")
-chestFilter.addEventListener('click', function (){
+function generateFilterList(){
+  var filterList =[]
+  //event listeners for filtering
+  const chestFilter = document.querySelector("#chestButton")
   if(chestFilter.checked){
-    return true;
+    filterList.push("Chest");
   }
-})
 
-const backFilter = document.querySelector("#backButton")
-backFilter.addEventListener('change', function (){
+  const backFilter = document.querySelector("#backButton")
   if(backFilter.checked){
-    return true;
+    filterList.push("Back");
   }
-})
 
-const bicepsFilter = document.querySelector("#bicepsButton")
-bicepsFilter.addEventListener('change', function (){
+  const bicepsFilter = document.querySelector("#bicepsButton")
   if(bicepsFilter.checked){
-    return true;
+    filterList.push("Biceps");
   }
-})
 
-const tricepsFilter = document.querySelector("#tricepsButton")
-tricepsFilter.addEventListener('change', function (){
+  const tricepsFilter = document.querySelector("#tricepsButton")
   if(tricepsFilter.checked){
-    return true;
+    filterList.push("Triceps");
   }
-})
 
-const legsFilter = document.querySelector("#legsButton")
-legsFilter.addEventListener('change', function (){
+  const legsFilter = document.querySelector("#legsButton")
   if(legsFilter.checked){
-    return true;
+    filterList.push("Legs");
   }
-})
 
-const shoulderFilter = document.querySelector("#shouldersButton")
-shoulderFilter.addEventListener('change', function (){
+  const shoulderFilter = document.querySelector("#shouldersButton")
   if(shoulderFilter.checked){
-    return true;
+    filterList.push("Shoulders");
   }
-})
-
+  console.log(filterList);
+  return filterList;
+}
 
 //DATA
 var exerciseSet = [
