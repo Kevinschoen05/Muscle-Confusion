@@ -1,5 +1,5 @@
-function displayExercise() {  
-    var selectedMuscleGroup = muscleGroupSelector(exerciseSet, "Chest")
+function displayExercise(filter) {  
+    var selectedMuscleGroup = muscleGroupSelector(exerciseSet, filter)
     var output = exerciseSelector(selectedMuscleGroup);
     document.getElementById("exerciseOutput").innerText = output;
     
@@ -31,7 +31,51 @@ function muscleGroupSelector(list, muscleGroup) {
   return selectedMuscleGroup;
 }
 
+//event listeners for filtering
+const chestFilter = document.querySelector("#chestButton")
+chestFilter.addEventListener('click', function (){
+  if(chestFilter.checked){
+    displayExercise("Chest")
+  }
+})
 
+const backFilter = document.querySelector("#backButton")
+backFilter.addEventListener('change', function (){
+  if(backFilter.checked){
+    return true;
+  }
+})
+
+const bicepsFilter = document.querySelector("#bicepsButton")
+bicepsFilter.addEventListener('change', function (){
+  if(bicepsFilter.checked){
+    return true;
+  }
+})
+
+const tricepsFilter = document.querySelector("#tricepsButton")
+tricepsFilter.addEventListener('change', function (){
+  if(tricepsFilter.checked){
+    return true;
+  }
+})
+
+const legsFilter = document.querySelector("#legsButton")
+legsFilter.addEventListener('change', function (){
+  if(legsFilter.checked){
+    return true;
+  }
+})
+
+const shoulderFilter = document.querySelector("#shouldersButton")
+shoulderFilter.addEventListener('change', function (){
+  if(shoulderFilter.checked){
+    return true;
+  }
+})
+
+
+//DATA
 var exerciseSet = [
         {
           "NAME": "Barbell Flat Bench Press",
