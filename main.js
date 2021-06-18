@@ -35,7 +35,7 @@ function muscleGroupSelector(list, muscleGroup) {
 const chestFilter = document.querySelector("#chestButton")
 chestFilter.addEventListener('click', function (){
   if(chestFilter.checked){
-    displayExercise("Chest")
+    return true;
   }
 })
 
