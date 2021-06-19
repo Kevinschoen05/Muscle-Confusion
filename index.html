@@ -26,49 +26,55 @@
   </head>
   <body>
     <h1>Muscle Confusion</h1>
-    <div class="container muscle groups">
-        <div class="row">
-            <div class=" col form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="chestButton" checked>
-                <label class="form-check-label" for="chestButton">Chest</label>
+        <div class="container muscle groups">
+            <div class="row">
+                <div class="filters col-6">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="chestButton" checked>
+                        <label class="form-check-label" for="chestButton">Chest</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="backButton" checked>
+                        <label class="form-check-label" for="backButton">Back</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="bicepsButton" checked>
+                        <label class="form-check-label" for="bicepsButton">Biceps</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="tricepsButton"checked>
+                        <label class="form-check-label" for="tricepsButton">Triceps</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="legsButton" checked>
+                        <label class="form-check-label" for="legsButton">Legs</label>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="shouldersButton" checked>
+                        <label class="form-check-label" for="shouldersButton">Shoulders</label>
+                    </div>
+                </div> 
+                <div class="col-6 ">
+                        <div class="exercise card border">
+                            <h1 class="card-header">Exercise</h1>
+                            <h2 id="exerciseOutput"></h2>
+                        </div>
+                        <div>
+                            <h3 class="x">X</h3>
+                        </div>
+                        <div class="reps card border">
+                            <h1 class ="card-header">Reps</h1>
+                            <h2 id="reps"></h2>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class=" col form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="backButton" checked>
-                <label class="form-check-label" for="backButton">Back</label>
-            </div>
-            <div class="col form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="bicepsButton" checked>
-                <label class="form-check-label" for="bicepsButton">Biceps</label>
-            </div>
-            <div class="col form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="tricepsButton"checked>
-                <label class="form-check-label" for="tricepsButton">Triceps</label>
-            </div>
-            <div class="col form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="legsButton" checked>
-                <label class="form-check-label" for="legsButton">Legs</label>
-            </div>
-            <div class="col form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="shouldersButton" checked>
-                <label class="form-check-label" for="shouldersButton">Shoulders</label>
-            </div>
+            
         </div>
-    </div>
-    <div class="container exercise"> 
-        <div class="row">
-            <div class="col">
-                <h1>Exercise</h1>
-                <h2 id="exerciseOutput"></h2>
-            </div>
-            <div class="col">
-                <h1>Reps</h1>
-                <h2 id="reps"></h2>
-            </div>
-        </div>    
+    <div>
         <div class=" button row">
             <button class="btn btn-primary" onclick=displayExercise()>Generate Exercise</button>
         </div>
-
     </div>
     <!-- MDB -->
     <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>

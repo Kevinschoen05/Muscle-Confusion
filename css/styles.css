@@ -10,5 +10,19 @@ h1,h2 {
 .button{
     text-align: center;
     padding-top: 50px;
-    
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.reps, .exercise {
+    padding: 20px;
+}
+
+.x{
+    text-align: center;
+    padding: 5%
+}
+
+#reps,#exerciseOutput{
+    padding-top: 10px;
 }
