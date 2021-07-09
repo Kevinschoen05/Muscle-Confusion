@@ -31,7 +31,7 @@
         <!-- ============================================ -->
 
       <section class="header">
-        <h1>Muscle Confusion</h1>
+        <p>Muscle Confusion</p>
       </section>
 
         <!-- ============================================ -->
@@ -39,7 +39,7 @@
         <!-- ============================================ -->
         <div class="container-fluid muscle groups ">
             <div class="row">
-                <div class="filters col-sm-6 col-6">
+                <div class="filters col-sm-6 col-6 ">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="chestButton" checked>
                         <label class="form-check-label" for="chestButton">Chest</label>
@@ -52,6 +52,9 @@
                         <input class="form-check-input" type="checkbox" id="bicepsButton" checked>
                         <label class="form-check-label" for="bicepsButton">Biceps</label>
                     </div>
+
+                </div> 
+                <div class="filters col-sm-6 col-6">
                     <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="tricepsButton"checked>
                         <label class="form-check-label" for="tricepsButton">Triceps</label>
@@ -64,7 +67,7 @@
                         <input class="form-check-input" type="checkbox" id="shouldersButton" checked>
                         <label class="form-check-label" for="shouldersButton">Shoulders</label>
                     </div>
-                </div> 
+                </div>
               
         <!-- ============================================ -->
         <!--                   OUTPUT CARDS               -->
@@ -89,10 +92,11 @@
         <!--                   SHUFFLE BUTTON             -->
         <!-- ============================================ -->
     <div>
-        <div class=" container-fluid d-grid gap-2 col-6 mx-auto button ">
-            <button class="btn btn-primary" onclick=displayExercise()>Generate Exercise</button>
+        <div class=" container-fluid d-grid gap-2 generate-button">
+            <button class="btn btn-primary generate-button" onclick=displayExercise()><span class="button-text">Generate Exercise</span></button>
         </div>
     </div>
+   
 
     <script type="text/javascript"src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

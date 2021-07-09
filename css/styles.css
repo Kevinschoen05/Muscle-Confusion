@@ -3,6 +3,7 @@
         text-align: center;
         padding-top: 40px;
         padding-bottom: 40px;
+        font-size: 5rem;
     }
     
     h2,h3,h4 { 
@@ -43,8 +44,14 @@
 @media only screen and (min-width: 0px){
 
 .filters { 
-    font-size: 3em;
-    width: 500%
+    font-size: 2em;
+    width :25%;
+
+
+}
+
+#chestButton{
+    text-align: center;
 }
 
 h1{
@@ -57,6 +64,9 @@ h1{
 
 .header{
     background-color: black;
+    font-size: 5rem;
+    text-align: center;
+    color:white;
 }
 
 .exercise, .reps {
@@ -68,8 +78,15 @@ h1{
 }
 
 #exerciseOutput, #reps, .x{
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
+.generate-button{
+    width: 100%;
+    height: 80px;
+}
+.button-text{
+    font-size: 3em;
+}
 
 }
