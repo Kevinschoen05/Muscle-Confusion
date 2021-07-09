@@ -1,39 +1,75 @@
+
+    h1{
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    
+    h2,h3,h4 { 
+        text-align: center;
+    }
+    
+    .form-check-label {
+        text-align: center;
+    
+    }
+    
+    .form-switch{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .button{
+        text-align: center;
+        padding-top: 50px;
+        padding-left: 30%;
+        padding-right: 30%;
+    }
+    
+    .reps, .exercise {
+        padding: 20px;
+    }
+    
+    .x{
+        text-align: center;
+        padding: 5%
+    }
+    
+    #reps,#exerciseOutput{
+        padding-top: 10px;
+    } 
+
+
+@media only screen and (min-width: 0px) and (max-width: 760px) {
+
+.filters { 
+    font-size: 3em;
+    width: 500%
+}
+
 h1{
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-}
-
-h2,h3,h4 { 
-    text-align: center;
-}
-
-.form-check-label {
-    text-align: center;
+    color: white;
 
 }
 
-.form-switch{
-    padding-top: 20px;
-    padding-bottom: 20px;
+.header{
+    background-color: black;
 }
 
-.button{
-    text-align: center;
-    padding-top: 50px;
-    padding-left: 30%;
-    padding-right: 30%;
+.exercise, .reps {
+    width: 100%;
 }
 
-.reps, .exercise {
-    padding: 20px;
+.card-header{
+    font-size: 3rem;
 }
 
-.x{
-    text-align: center;
-    padding: 5%
+#exerciseOutput, #reps, .x{
+    font-size: 3rem;
 }
 
-#reps,#exerciseOutput{
-    padding-top: 10px;
-} 
+
+}
