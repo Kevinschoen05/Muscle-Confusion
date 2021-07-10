@@ -226,7 +226,7 @@ var exerciseSet = [
           "MUSCLE_GROUP": "Legs"
         },
         {
-          "NAME": "Quad Exstensions",
+          "NAME": "Quad Extensions",
           "MUSCLE_GROUP": "Legs"
         },
         {
