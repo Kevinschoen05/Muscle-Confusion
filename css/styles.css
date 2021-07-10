@@ -89,4 +89,15 @@ h1{
     font-size: 3em;
 }
 
+table{
+    margin-top: 100px;
+}
+
+th{
+    font-size: 3rem;
+}
+
+td{
+    font-size: 2rem;
+}
 }
