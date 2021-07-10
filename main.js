@@ -9,6 +9,7 @@ function displayExercise() {
     var reps = repsGenerator(); 
     document.getElementById("reps").innerText = reps;
     }
+    addWorkoutLog(output, reps);
 };
 
 function exerciseSelector(list){
@@ -72,6 +73,18 @@ function generateFilterList(){
   }
   console.log(filterList);
   return filterList;
+}
+
+function addWorkoutLog(exercise, reps) {
+  var workoutTable = document.getElementById("workoutTable");
+
+  var row = workoutTable.insertRow(0);
+
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+
+  cell1.innerHTML = exercise;
+  cell2.innerHTML = reps;
 }
 
 //DATA
