@@ -1,3 +1,10 @@
+var chestCounter = 0; 
+var backCounter = 0; 
+var bicepsCounter = 0;
+var tricepsCounter = 0; 
+var legsCounter = 0;
+var shouldersCounter = 0; 
+
 function displayExercise() {  
   filterList = generateFilterList();
 
@@ -55,6 +62,7 @@ function generateFilterList(){
   const bicepsFilter = document.querySelector("#bicepsButton")
   if(bicepsFilter.checked){
     filterList.push("Biceps");
+
   }
 
   const tricepsFilter = document.querySelector("#tricepsButton")
@@ -71,7 +79,6 @@ function generateFilterList(){
   if(shoulderFilter.checked){
     filterList.push("Shoulders");
   }
-  console.log(filterList);
   return filterList;
 }
 
@@ -82,10 +89,19 @@ function addWorkoutLog(exercise, reps) {
 
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2)
 
   cell1.innerHTML = exercise;
   cell2.innerHTML = reps;
+  cell3.innerHTML = ("<button class='btn btn-danger' onclick='deleteWorkoutLog(this)' >Skip</button>")
+
 }
+
+function deleteWorkoutLog(row) { 
+  var i =row.parentNode.rowIndex;
+  document.getElementById("workoutTable").deleteRow(i);
+  }
+
 
 //DATA
 var exerciseSet = [
@@ -284,6 +300,14 @@ var exerciseSet = [
         {
           "NAME": "Farmers Walks",
           "MUSCLE_GROUP": "Traps"
+        },
+        {
+          "NAME": "Goblet Squats",
+          "MUSCLE_GROUP": "Legs"
+        },
+        {
+          "NAME": "Reverse Curls",
+          "MUSCLE_GROUP": "Biceps"
         }
        
 ]
