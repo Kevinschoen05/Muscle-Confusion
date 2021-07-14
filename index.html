@@ -31,42 +31,63 @@
         <!-- ============================================ -->
 
       <section class="header">
-        <p>Muscle Confusion</p>
+        <p>Muscle Confusion <span><button class="openbtn fa fa-bars fa-xs" onclick="openNav()"></button></span></p>
       </section>
 
+      <div id="mySidebar" class="sidebar filters ">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="chestButton" checked>
+            <label class="form-check-label" for="chestButton">Chest</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="backButton" checked>
+            <label class="form-check-label" for="backButton">Back</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="bicepsButton" checked>
+            <label class="form-check-label" for="bicepsButton">Biceps</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="tricepsButton"checked>
+            <label class="form-check-label" for="tricepsButton">Triceps</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="legsButton" checked>
+            <label class="form-check-label" for="legsButton">Legs</label>
+        </div>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="shouldersButton" checked>
+            <label class="form-check-label" for="shouldersButton">Shoulders</label>
+        </div>
+        <div class="rep-range">
+            <div class="row minimum">
+                <div class="col-sm-12">
+                    <input id="minReps" type="number" value="5" placeholder="5" min="5" max="20">
+                    <label for="minReps">Minimum Reps</label>
+                </div>
+            </div>
+            <div class="row maximum">
+                <div class="col-sm-12">
+                    <input id="maxReps" type="number" value="20" placeholder="20" min="5" max="20">
+                    <label for="maxReps">Maximum Reps</label>
+                </div>
+            </div>
+        </div>
+
+      </div>
+      
         <!-- ============================================ -->
         <!--                   Filters                    -->
         <!-- ============================================ -->
         <div class="container-fluid muscle groups ">
             <div class="row">
                 <div class="filters col-sm-6 col-6 ">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="chestButton" checked>
-                        <label class="form-check-label" for="chestButton">Chest</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="backButton" checked>
-                        <label class="form-check-label" for="backButton">Back</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="bicepsButton" checked>
-                        <label class="form-check-label" for="bicepsButton">Biceps</label>
-                    </div>
+                   
 
                 </div> 
                 <div class="filters col-sm-6 col-6">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="tricepsButton"checked>
-                        <label class="form-check-label" for="tricepsButton">Triceps</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="legsButton" checked>
-                        <label class="form-check-label" for="legsButton">Legs</label>
-                    </div>
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="shouldersButton" checked>
-                        <label class="form-check-label" for="shouldersButton">Shoulders</label>
-                    </div>
+                   
                 </div>
               
         <!-- ============================================ -->

@@ -27,7 +27,11 @@ function exerciseSelector(list){
 }
 
 function repsGenerator(){
-    var reps = Math.floor(Math.random() * (20 -5 )+5) 
+    var min = parseInt(document.getElementById("minReps").value);
+    var max = parseInt(document.getElementById("maxReps").value);
+    console.log(min);
+    console.log(max);
+    var reps = Math.floor(Math.random()*(max-min) + min);
     return reps;
 }
 
@@ -101,6 +105,17 @@ function deleteWorkoutLog(row) {
   var i =row.parentNode.rowIndex;
   document.getElementById("workoutTable").deleteRow(i);
   }
+
+  /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "500px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+}
+
 
 
 //DATA
