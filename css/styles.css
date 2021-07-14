@@ -177,4 +177,11 @@ p{
       padding-left: 0px;
       padding-top:20px;
   }
+
+  .closeNav{
+      margin-top: 20px;
+      height:5rem;
+      width:90%;
+      font-size: 2rem;
+  }
 }
