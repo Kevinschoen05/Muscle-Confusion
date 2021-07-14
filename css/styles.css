@@ -46,6 +46,8 @@
 .filters { 
     font-size: 2em;
     width :25%;
+    color: white;
+    padding-left: 10px;
 
 
 }
@@ -106,4 +108,73 @@ td{
     width: 100%;
     height: 200%;
 }
+
+.fa-bars{
+    position: absolute;
+    vertical-align: middle;
+    margin-left: 50px;
+    margin-top: 25px;
+
+}
+p{
+    text-align: center;
+}
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 5; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    opacity: 90%;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+
+  }
+  
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+
+  #minReps, #maxReps{
+    width: 25%;
+  }
+
+  .minimum, .maximum{
+      padding-left: 0px;
+      padding-top:20px;
+  }
 }
