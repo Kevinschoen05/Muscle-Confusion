@@ -1,13 +1,19 @@
+var enteredExercise ='';
+var enteredMuscleGroup ='';
+var exerciseSet = [];
+/*
 var chestCounter = 0; 
 var backCounter = 0; 
 var bicepsCounter = 0;
 var tricepsCounter = 0; 
 var legsCounter = 0;
 var shouldersCounter = 0; 
+*/
 
 function displayExercise() {  
   filterList = generateFilterList();
-
+  exerciseSet = getExerciseSet();
+  console.log(exerciseSet)
     var selectedMuscleGroup = muscleGroupSelector(exerciseSet, filterList)
     var output = exerciseSelector(selectedMuscleGroup);
     document.getElementById("exerciseOutput").innerText = output;
@@ -119,9 +125,56 @@ function closeNav() {
 
 }
 
+/* Add new Exercise to database */
+function addExercise(){
+  var enteredExercise = document.getElementById('newExercise').value;
+  var enteredMuscleGroup =document.getElementById('newMuscleGroup').value;
 
+  if( enteredExercise === '' || enteredMuscleGroup === '') {
+    console.log("blank value");
+    return
+  }
 
-//DATA
+  fetch('https://muscle-confusion-710e2-default-rtdb.firebaseio.com/exercises.json',{
+    method: 'POST',
+    headers:{
+      'Content-Type': 'application.json'
+    },
+    body: JSON.stringify({
+      NAME: enteredExercise,
+      MUSCLE_GROUP: enteredMuscleGroup
+    })
+  })
+  enteredExercise = '';
+  enteredMuscleGroup =''
+  document.getElementById('newExercise').value = '';
+  document.getElementById('newMuscleGroup').value =''
+
+  console.log("submitted")
+}
+
+/* Get Full Set of Exercises from DB */
+function getExerciseSet() {
+  fetch('https://muscle-confusion-710e2-default-rtdb.firebaseio.com/exercises.json').then((response) => {
+    if(response.ok){
+      return response.json();
+    }
+  }).then((data) => {
+    const exerciseSet = []
+    for( const id in data ){
+      exerciseSet.push({
+        id: id,
+        NAME: data[id].NAME,
+        MUSCLE_GROUP: data[id].MUSCLE_GROUP
+      })
+      this.exerciseSet = exerciseSet
+
+    }
+  })
+  return exerciseSet
+}
+
+/*DATA
 var exerciseSet = [
         {
           "NAME": "Barbell Flat Bench Press",
@@ -329,3 +382,4 @@ var exerciseSet = [
         }
        
 ]
+*/
