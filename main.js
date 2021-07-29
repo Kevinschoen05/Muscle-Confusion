@@ -102,7 +102,7 @@ function addWorkoutLog(exercise, reps) {
 }
 
 function deleteWorkoutLog(row) { 
-  var i =row.parentNode.rowIndex;
+  var i = parseInt(row.parentNode.rowIndex);
   document.getElementById("workoutTable").deleteRow(i);
   }
 
