@@ -83,6 +83,21 @@ function generateFilterList(){
   if(shoulderFilter.checked){
     filterList.push("Shoulders");
   }
+
+  const melLegFilter = document.querySelector("#melLegsAndButtButton")
+  if(melLegFilter.checked){
+    filterList.push("melLegsAndButt");
+  }
+
+  const melUpperFilter = document.querySelector("#melUpperBodyButton")
+  if(melUpperFilter.checked){
+    filterList.push("melUpper");
+  }
+
+  const melMiscFilter = document.querySelector("#melMiscellaneousButton")
+  if(melMiscFilter.checked){
+    filterList.push("melMisc");
+  }
   return filterList;
 }
 
